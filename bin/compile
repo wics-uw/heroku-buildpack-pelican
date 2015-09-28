@@ -55,6 +55,12 @@ else
   python -m pip install --quiet Markdown | indent
 fi
 
+puts-step "Downloading binary files"
+
+wget https://github.com/wics-uw/website-binary/archive/master.zip | indent
+unzip master.zip | indent
+mv website-binary-master/* content/
+
 puts-step "Running pelican"
 
 if [[ -f herokuconf.py ]]; then
