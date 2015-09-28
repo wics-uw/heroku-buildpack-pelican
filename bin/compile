@@ -63,10 +63,10 @@ mv website-binary-master/* content/
 
 puts-step "Running pelican"
 
-if [[ -f herokuconf.py ]]; then
-  CONFIG_FILE="herokuconf.py"
+if [[ -f pelicanconf.py ]]; then
+  CONFIG_FILE="pelicanconf.py"
 else
-  puts-warn "A herokuconf.py file is required."
+  puts-warn "A pelicanconf.py file is required."
   exit 1
 fi
 
