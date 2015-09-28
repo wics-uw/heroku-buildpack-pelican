@@ -57,12 +57,10 @@ fi
 
 puts-step "Running pelican"
 
-if [[ -f publishconf.py ]]; then
-  CONFIG_FILE="publishconf.py"
-elif [[ -f pelicanconf.py ]]; then
-  CONFIG_FILE="pelicanconf.py"
+if [[ -f herokuconf.py ]]; then
+  CONFIG_FILE="herokuconf.py"
 else
-  puts-warn "A pelicanconf.py or publishconf.py file is required."
+  puts-warn "A herokuconf.py file is required."
   exit 1
 fi
 
